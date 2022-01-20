@@ -8,12 +8,18 @@ import (
 	"runtime"
 	"sync"
 	"sync/atomic"
-
-	"github.com/getlantern/golog"
 )
 
+type ErrorLogger interface {
+	Errorf(format string, v ...interface{})
+}
+
+func SetErrorLogger(l ErrorLogger) {
+	log = l
+}
+
 var (
-	log = golog.LoggerFor("systray")
+	log ErrorLogger
 
 	systrayReady  func()
 	systrayExit   func()
