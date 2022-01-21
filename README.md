@@ -60,7 +60,7 @@ go: finding github.com/getlantern/golog latest
 
 Now look for *Awesome App* in your menu bar!
 
-![Awesome App screenshot](example/screenshot.png)
+![Awesome App screenshot](_example/screenshot.png)
 
 ## The Webview example
 
